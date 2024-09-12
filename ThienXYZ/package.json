@@ -1,0 +1,29 @@
+{
+  "name": "serverapp",
+  "version": "1.0.0",
+  "description": "Thien.xyz",
+  "main": "https_server.js",
+  "scripts": {
+    "watch": "nodemon",
+    "start": "nodemon https_server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thien Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-ip": "^1.0.4",
+    "node-fetch": "^2.7.0",
+    "node-windows": "^1.0.0-beta.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Thien963@bitbucket.org/thien963/_serverapp.git"
+  },
+  "homepage": "https://bitbucket.org/thien963/_serverapp#readme"
+}

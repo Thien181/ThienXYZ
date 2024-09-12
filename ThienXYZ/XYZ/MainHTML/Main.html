@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <% include mainHead.html %>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    </head>
+    <body>
+      
+        <% include menu.html %>
+        
+        <!-- include frontSlide.html %>-->
+        <% include SlideTest.html %>
+        <!-- <! include LeftRightPanel.html %> -->
+        
+        <div class="items-container-FrontPage"></div>
+        <hr>
+        <!--
+        <div class="items-container-ThongBao"></div>
+        <hr>
+        <div class="items-container-SinhHoat"></div>
+        -->
+        <% include Main-Footing.html %> 
+       
+        
+    <script> 
+      function updatemenu() {
+        if (document.getElementById('responsive-menu').checked == true) {
+          document.getElementById('menu').style.borderBottomRightRadius = '0';
+          document.getElementById('menu').style.borderBottomLeftRadius = '0';
+        }else{
+          document.getElementById('menu').style.borderRadius = '10px';
+        }
+      }
+      
+     $(function() {
+        inits();
+        //let href = location.href;
+        //let path = window.location.pathname;
+        //path= path.substring(1)
+
+        loadSlides();
+        
+        let page = "FrontPage";
+        let jsonPath = window.location.origin + "/_" + page +"/" + page + ".json";
+        jsonData = {};
+      
+        loadJSON(jsonPath,page)
+          .then(jsonData => {
+              $(".items-container-FrontPage").html(listItems(page,jsonData,4));
+          }
+        );
+/*
+        let ThongBaoPath = window.location.origin + "/_ThongBao/ThongBao.json";
+        ThongBaoData = {};
+        
+        loadJSON(ThongBaoPath,"ThongBao")
+            .then(ThongBaoData => {
+                $(".items-container-ThongBao").html(listItems("ThongBao",ThongBaoData,4));
+            }
+        );
+
+        let SinhhoatPath = window.location.origin + "/_SinhHoat/SinhHoat.json";
+        SinhHoatData = {};
+      
+        loadJSON(SinhhoatPath,"SinhHoat")
+          .then(SinhHoatData => {
+              $(".items-container-SinhHoat").html(listItems("SinhHoat",SinhHoatData,4));
+          }
+        );
+*/
+       });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "MainSlides": [
+    {
+      "image": "\\Thien\\Images\\FrontPage\\pic1.jpg",
+      "showOrder": "1"
+    },
+    {
+      "image": "\\Thien\\Images\\FrontPage\\pic2.jpg",
+      "showOrder": "2"
+    },
+    {
+      "image": "\\Thien\\Images\\FrontPage\\pic3.jpg",
+      "showOrder": "3"
+    },
+    {
+      "image": "\\Thien\\Images\\FrontPage\\pic4.jpg",
+      "showOrder": "4"
+    },
+    {
+      "image": "\\Thien\\Images\\FrontPage\\pic5.jpg",
+      "showOrder": "5"
+    }
+
+  ]
+}

@@ -1,0 +1,67 @@
+{"TuongTe": [
+   {
+	"SubHeading":"Year 2024",
+	"ItemList":[
+	{
+	 "title":"April 2024 Calendar",
+	 "IsExternalImage":"N",
+	 "image":"/Thien/Images/general/calendar.png",
+	 "type":"html",
+	 "intro":"",
+	 "IsExternalURL":"N",
+	 "path":"/Calendar",
+	 "visible":"Y",
+	 "newWindow":"Y",
+	 "postDate":"Thursday, 15 February 2024"
+	},
+	{
+	 "title":"Highlights",
+	 "IsExternalImage":"N",
+	 "image":"/Thien/Images/general/nzl2ndtripMap.png",
+	 "type":"pdf",
+	 "intro":"",
+	 "IsExternalURL":"N",
+	 "path":"/_NZL2ndTrip/Driving.pdf",
+	 "visible":"Y",
+	 "newWindow":"Y",
+	 "postDate":"Thursday, 29 February 2024"
+	},
+	{
+	 "title":"Info",
+	 "IsExternalImage":"N",
+	 "image":"/Thien//Images/general/instruction.jpg",
+	 "type":"html",
+	 "intro":"",
+	 "IsExternalURL":"N",
+	 "path":"/info",
+	 "visible":"Y",
+	 "newWindow":"N",
+	 "postDate":"Friday, 16 February 2024"
+	},
+	{
+	 "title":"Dollars",
+	 "IsExternalImage":"N",
+	 "image":"/Thien/Images/general/TheDollars.png",
+	 "type":"html",
+	 "intro":"",
+	 "IsExternalURL":"N",
+	 "path":"/TableForms",
+	 "visible":"Y",
+	 "newWindow":"Y",
+	 "postDate":"Friday, 01 March 2024"
+	},
+	{
+	 "title":"Pictures",
+	 "IsExternalImage":"N",
+	 "image":"/Thien/Images/general/instruction.jpg",
+	 "type":"pdf",
+	 "intro":"",
+	 "IsExternalURL":"N",
+	 "path":"/_NZL2ndTrip/Driving.pdf",
+	 "visible":"Y",
+	 "newWindow":"Y",
+	 "postDate":"Friday, 16 February 2024"
+	}]
+   }
+ ]
+}

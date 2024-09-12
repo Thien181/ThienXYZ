@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thien XYZ</title>
+        <% include head.html %>
+        <link rel="stylesheet" href="../css/headerW.css">
+    </head>
+    <body>
+      <!-- Search will be on top of menu items - appears when hamburger menu is clicked-->
+        
+        <!--<! include header.html %>-->
+        <!-- <! include coverPage.html %> -->
+        <!-- <! include login-popup.html %> -->
+        <!-- <! include forgot-popup.html %> -->
+        <!-- <! include register-popup.html %> -->
+        <% include headerW.html %>
+        
+        <!-- <% include intros.html %> -->
+        <!-- <% include footer.html %> -->
+    <script>    
+    $(function() {
+        // $(document).click(function (e) {
+        //   if (e.target.id != "hamburger-checkbox"){
+        //       if($('#hamburger-checkbox').is(':checked')) {
+        //         // console.log("Checked");
+        //           if ( $(e.target).closest('.hamburger-icon').length || $(e.target).closest('.nav').length){
+        //               //console.log("do nothing");
+        //           }
+        //           else{
+        //               //console.log("change prop to false");
+        //               $('#hamburger-checkbox').prop('checked', false);
+        //           }
+        //       }
+        //   }
+        // });
+
+        inits();
+        jsonData = {};
+        console.log("window.location.url = " + window.location.origin);
+        let jsonPath = window.location.origin + "/_ThongBao/ThongBao.json";
+        console.log("jsonPath = " + jsonPath);
+        loadJSON(jsonPath,"ThongBao")
+          .then(jsonData => {
+              console.log("thongBaoAll ",jsonData);
+              //listFirstthongBaos(); 
+              // $(".ThongBaoItems").html(frontPageItems(3));
+              $(".ThongBaoItems").html(ListFewfrontPageItems(3,jsonData,"ThongBao"));
+              //initClick();
+            }
+          );
+          let tinTucPath = window.location.origin + "/_TinTuc/TinTuc.json";
+          tinTucData = {};
+          loadJSON(tinTucPath,"TinTuc")
+          .then(tinTucData => {
+              console.log("TinTucData ",tinTucData);
+              $(".TinTucItems").html(ListFewfrontPageItems(3,tinTucData,"TinTuc"));
+            }
+          );
+
+          let tuongtePath = window.location.origin + "/_TuongTe/TuongTe.json";
+          TuongTeData = {};
+          loadJSON(tuongtePath,"TuongTe")
+          .then(TuongTeData => {
+              console.log("TuongTeData ",TuongTeData);
+              $(".TuongTeItems").html(ListFewfrontPageItems(3,TuongTeData,"TuongTe"));
+            }
+          );
+      });
+    </script>
+  </body>
+</html>

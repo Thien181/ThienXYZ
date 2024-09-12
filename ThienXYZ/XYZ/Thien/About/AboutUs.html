@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <title>About Us</title>
+        <meta name="description" content="">
+        <% include ../../MainHTML/mainHead.html %>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
+    </head>
+<body>
+    <% include ../../MainHTML/menu.html %>
+    <!--<! include ../../MainHTML/frontSlide.html %>-->
+    
+    <!-- <li><a href="#" onclick="window.open('/HCN/About/About_VEFA_Eng.pdf', '_blank', 'fullscreen=yes'); return false;">About Us</a></li> -->
+    <!--<embed src="/HCN/About/About_VEFA_Eng.pdf" width="900px" height="100%" /> -->
+    <!-- src="/HCN/About/About_VEFA_Eng.pdf#toolbar=0&navpanes=0&scrollbar=0" -->
+    <div class="showpdf">
+        <!--<embed
+            
+			src="/_NZL2ndTrip/Driving.pdf"
+            type="application/pdf"
+            frameBorder="0"
+            scrolling="auto"
+            height="100%"
+            width="80%"
+        ></embed>-->
+    </div>
+    <div>
+        <img src="/Thien/images/Main/Sketch.png"  alt="Thien dot xyz"/>
+    </div>
+
+    <% include ../../MainHTML/Main-Footing.html %> 
+    <script src="/Thien/js/loadpagescript.js"></script> 
+    <script> 
+        $(function() {
+            loadSlides();
+        });
+    </script> 
+</body>
+</html>
