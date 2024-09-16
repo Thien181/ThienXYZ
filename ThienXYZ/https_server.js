@@ -148,13 +148,26 @@ pagesArray.forEach(function(pageObj){
 // });
 
 //Commented out as - do not know why it is not working on port 80
-var https = require('https');
-https.createServer(options,app).listen(PORT,function(req,res){
-    console.log("Listen to https " + PORT);
-   //res.writeHead(301,{"Location":"https://" + req.headers['host'] + req.url});
-  // res.end();
-  //res.redirect('https://' + req.headers.host +req.url);
+if(PORT==443){
+	var https = require('https');
+	https.createServer(options,app).listen(PORT,function(req,res){
+    	console.log("Listen to https " + PORT);
+   	//res.writeHead(301,{"Location":"https://" + req.headers['host'] + req.url});
+  	// res.end();
+  	//res.redirect('https://' + req.headers.host +req.url);
 });
+}
+else{
+	var http = require('http');
+	http.createServer(options,app).listen(PORT,function(req,res){
+		console.log("Listen to http " + PORT);
+	   //res.writeHead(301,{"Location":"https://" + req.headers['host'] + req.url});
+	  // res.end();
+	  //res.redirect('https://' + req.headers.host +req.url);
+	});
+}
+
+
 
 // var redirectApp = express () ,
 // redirectServer = http.createServer(redirectApp);
