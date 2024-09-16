@@ -9,14 +9,14 @@ var serveStatic = require('serve-static');
 //const expressip = require('express-ip');
 //const expressip = require('./node_modules/express-ip/index.js');
 const hostname = 'thien.xyz';
-
+const PORT = process.env.PORT || 443;
 
 const options = {
     key: fs.readFileSync("ssl/server.key"),
     cert: fs.readFileSync("ssl/certificate.crt"),
 	ca:fs.readFileSync("ssl/CABundle.crt")
 }
-var port = 3000; //443;//80;
+//var port = 3000; //443;//80;
 var app = express();
 
 var url = require('url');//NOT SURE What is this for
@@ -149,8 +149,8 @@ pagesArray.forEach(function(pageObj){
 
 //Commented out as - do not know why it is not working on port 80
 var https = require('https');
-https.createServer(options,app).listen(port,function(req,res){
-    console.log("Listen to https ");
+https.createServer(options,app).listen(PORT,function(req,res){
+    console.log("Listen to https " + PORT);
    //res.writeHead(301,{"Location":"https://" + req.headers['host'] + req.url});
   // res.end();
   //res.redirect('https://' + req.headers.host +req.url);
