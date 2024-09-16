@@ -16,7 +16,7 @@ const options = {
     cert: fs.readFileSync("ssl/certificate.crt"),
 	ca:fs.readFileSync("ssl/CABundle.crt")
 }
-var port = 443;//80;
+var port = 3000; //443;//80;
 var app = express();
 
 var url = require('url');//NOT SURE What is this for
